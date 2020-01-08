@@ -33,8 +33,7 @@ class Plane: SCNNode {
         
         // Create a node to visualize the plane's bounding rectangle.
         let extentPlane: SCNPlane = SCNPlane(width: CGFloat(anchor.extent.x), height: CGFloat(anchor.extent.z))
-        let sphere = SCNSphere(radius: 0.1)
-        extentNode = SCNNode(geometry: sphere)
+        extentNode = SCNNode(geometry: extentPlane)
         extentNode.simdPosition = anchor.center
         
         // `SCNPlane` is vertically oriented in its local coordinate space, so
